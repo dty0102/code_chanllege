@@ -26,7 +26,6 @@ public class codechallenge {
 		File folder = new File("/wc_input"); 
 		File[] listOfFiles = folder.listFiles();//get a list of file
 		for(int i=0;i<listOfFiles.length;i++){//read one file at a time
-			System.out.println(listOfFiles[i]);
 		try(BufferedReader br = new BufferedReader(new FileReader(listOfFiles[i].getPath()))){
 	        String line = br.readLine();// read one line in the file
 	        while (line != null) {
@@ -68,7 +67,6 @@ public class codechallenge {
 	private static void Wordcount(String[] splited) {
 		for(int i=0;i<splited.length;i++){
 			if(splited[i]==" "){break;}
-			System.out.println(splited[i]);
 			//if the word is not in the hashmap, add it to the hashmap with value=1
 			if(splited[i]!=" +"){
 			if(!wordcount.containsKey(splited[i])){wordcount.put(splited[i], 1);}
